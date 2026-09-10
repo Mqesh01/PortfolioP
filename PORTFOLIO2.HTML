@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N.H.M - Front End-Developer</title>
+  
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
+  <style>
+    :root {
+      --bg-dark: #121212;
+      --bg-card: #1e1e1e;
+      --text-light: #e0e0e0;
+      --accent: #4dabf7;
+    }
+    
+    [data-bs-theme="light"] {
+      --bg-dark: #f5f5f5;
+      --bg-card: #ffffff;
+      --text-light: #212529;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar { background-color: rgba(18,18,18,0.8); backdrop-filter: blur(10px); }
+    .card { background-color: var(--bg-card); border: 1px solid #333; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .btn-primary { background-color: var(--accent); border: none; }
+    .btn-outline-light { border-color: var(--accent); color: var(--accent); }
+    .btn-outline-light:hover { background-color: var(--accent); color: #000; }
+    
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at 20% 50%, #1e3a5f 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, #2d1e5f 0%, transparent 50%);
+    }
+    
+    .skill-badge { background-color: #2a2a2a; padding: 8px 16px; border-radius: 20px; margin: 5px; display: inline-block; font-weight: 500; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">N.H.M</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeToggle" class="btn btn-sm btn-outline-light ms-3"><i class="bi bi-sun"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Hello, I'm <span style="color:var(--accent)">NKOSIPHILE. H . MARANDU</span></h1>
+    <p class="lead mt-3">My strength as a Front End-Developer lies in creativity, problem-solving, responsiveness, and my motivation to build engaging, user-friendly websites.</p>
+    <div class="mt-4">
+      <a href="#contact" class="btn btn-primary btn-lg me-2">Hire Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">About Me</h2>
+    <p class="text-center mb-4">I specialize in creating responsive, interactive, visually appealing websites using HTML, CSS, JavaScript, modern frameworks, UI design, accessibility, performance optimization, and cross-browser compatibility.</p>
+    
+    <h4 class="mt-5">Skills</h4>
+    <div>
+      <span class="skill-badge">REACT</span>
+      <span class="skill-badge">Node.js</span>
+      <span class="skill-badge">Javascript & TypeScript</span>
+      <span class="skill-badge">BOOTSTRAP</span>
+      <span class="skill-badge">HTML</span>
+      <span class="skill-badge">CSS</span>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">PROJECTS</h2>
+    <div class="row g-4">
+      
+      <!-- Project 1 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="Images/TE.png" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Telone</h5>
+            <p class="card-text">Wifi company self service.</p>
+            <P class="card-text">This Telone Dashboard wbsite uses HTML5, Bootstrap 5, and CSS for a responsive layout. It's a telecom service site offering Internet, TV, Mobile, Security, and Home Phone.Button-style navbar limks all pages fpr easy navigation.</P>
+            <a href="file:///C:/Users/user/Desktop/PORTFOLIO/TE/Home.html" target="_blank" class="btn btn-primary"><i class="bi bi-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="Images/IE.png" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Indrive</h5>
+            <p class="card-text">Hire & Chauffeur Company</p>
+            <p class="card-text">This is <b>Bootstrap 5 HTML/CSS</b>code.It builds a responsive, mobile-first car rental website for <b>inDrive.</b> Purpose: let customers browse cars, view pricing, learn how it works, and conatct/book online with lime and black branding.</p>
+            <a href="file:///C:/Users/user/Desktop/PORTFOLIO/IE/Home.html" target="_blank" class="btn btn-primary"><i class="bi bi-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="Images/ES.png" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Edgars</h5>
+            <p class="card-text">E-commerce apparell store.</p>
+            <p class="card-text">This is an Edgars dashboard site uses HTML5, Bopotstrap 5 and custom CSS with a red, black, white minimalist retail style 
+             <p><b>Purpose</b>: E-commerce clothing storewfront.</p>
+             <p><b>Icludes</b>: Home hero, Shop, New In, Mens, Accessories, Contact pages, button navbar, product cards, foorms and footer.</p>
+            </p>
+            <a href="file:///C:/Users/user/Desktop/PORTFOLIO/ES/Home.html" target="_blank" class="btn btn-primary"><i class="bi bi-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <img src="Images/CD.png" class="card-img-top" alt="Project 4">
+          <div class="card-body">
+            <h5 class="card-title">Croco Motors</h5>
+            <p class="card-text">Car Sales.</p>
+            <p class="card-text">It's HTML5 with Bootstrap 5 CSS  framework. Builds a responsive multi-page car rental website for "Croco Motors" with blue, red, white theme, navigation, and contact sections.</p>
+            <a href="file:///C:/Users/user/Desktop/PORTFOLIO/CD/Home.html#" target="_blank" class="btn btn-primary"><i class="bi bi-eye"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Let's Connect</h2>
+    <p class="text-center mb-4">I am currently looking for new opportunities. My inbox is open.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Your Email</label>
+            <input type="email" class="form-control bg-dark text-light" placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Subject</label>
+            <input type="text" class="form-control bg-dark text-light" placeholder="Just saying hi">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control bg-dark text-light" rows="4" placeholder="Let's talk about..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4 border-top border-secondary">
+  <div class="container">
+    <a href="https://linkedin.com" class="text-light me-3"><i class="bi bi-linkedin fs-4"></i></a>
+    <p>For inquiries-Contact on:</p>
+    <P>+263 77 910 6926</P>
+    <P>mpalankosiphile@100gmail.com</P>
+    <p class="mt-3 mb-0">N.H.M 2026 © All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Theme toggle: dark grey <-> light
+  const themeToggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  
+  themeToggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-bs-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-bs-theme', next);
+    themeToggle.innerHTML = next === 'dark' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+    });
+  });
+</script>
+
+</body>
+</html>
