@@ -1,0 +1,302 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Croco Motors - Premium Car Rental</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{
+      --cm-blue: #0D47A1;
+      --cm-red: #D32F2F;
+      --cm-white: #ffffff;
+      --cm-light: #F5F7FA;
+    }
+    body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; }
+    .navbar{ background: var(--cm-white); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+    .navbar-brand{ font-weight: 800; color: var(--cm-blue) !important; }
+    .navbar-brand span{ color: var(--cm-red); }
+    .btn-primary{ background: var(--cm-blue); border-color: var(--cm-blue); }
+    .btn-primary:hover{ background: #08306B; border-color: #08306B; }
+    .btn-outline-danger{ color: var(--cm-red); border-color: var(--cm-red); }
+    .btn-outline-danger:hover{ background: var(--cm-red); color: var(--cm-white); }
+    .hero{ background: url('https://images.unsplash.com/photo-1549924231-3563d5019201?q=80&w=1600') center/cover no-repeat; min-height: 520px; position: relative; }
+    .hero::after{ content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,.2) 60%); }
+    .hero .content{ position: relative; z-index: 2; color: var(--cm-white); }
+    .search-card{ background: var(--cm-white); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+    .nav-tabs .nav-link.active{ background: var(--cm-blue); color: var(--cm-white); border-color: var(--cm-blue); }
+    .category-card{ position: relative; border-radius: 12px; overflow: hidden; }
+    .category-card img{ height: 240px; object-fit: cover; width: 100%; }
+    .category-label{ position: absolute; top: 16px; left: 16px; color: var(--cm-white); font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,.5); }
+    .trend-card{ border: 1px solid #eee; border-radius: 12px; transition: .2s; }
+    .trend-card:hover{ box-shadow: 0 8px 20px rgba(13,71,161,.1); border-color: var(--cm-blue); }
+    .feature-bar{ background: #111; color: var(--cm-white); }
+    .feature-bar i{ color: var(--cm-red); font-size: 1.5rem; }
+    .discount{ background: linear-gradient(90deg, #000 0%, #1a1a1a 100%); color: var(--cm-white); }
+    .discount-badge{ background: var(--cm-blue); color: var(--cm-white); }
+    .contact{ background: var(--cm-light); }
+    footer{ background: #0a0a0a; color: #bbb; }
+    footer a{ color: #bbb; text-decoration: none; }
+    footer a:hover{ color: var(--cm-white); }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">c<span>R</span>oco Motors</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Fleet.html">Fleet</a></li>
+          <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search...">
+          <button class="btn btn-primary"><i class="bi bi-person"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero d-flex align-items-center">
+    <div class="container content py-5">
+      <div class="row">
+        <div class="col-lg-4 text-center">
+          <img src="images/mercedes-amg-gle63-s-4matic-mercedes-benz-amg-chernyi-mers-l.webp" class="img-fluid" alt="Mercedes">
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold">Premium car <br>rental</h1>
+          <p class="mt-3">We want you to have a stress-free rental experience. Simple search, customer reviews, and pick-up points across the city.</p>
+        </div>
+      </div>
+
+      <!-- Search Card -->
+      <div class="search-card p-3 mt-4">
+        <ul class="nav nav-tabs border-0 mb-3">
+          <li class="nav-item"><a class="nav-link" href="#">Distance</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Hourly</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Flat Rate</a></li>
+        </ul>
+        <div class="row g-2 align-items-end">
+          <div class="col-md-3"><label class="form-label small">Pick Up Address</label><input class="form-control" placeholder="From address, airport, hotel..."></div>
+          <div class="col-md-3"><label class="form-label small">Drop Off Address</label><input class="form-control" placeholder="From address, airport, hotel..."></div>
+          <div class="col-md-2"><label class="form-label small">Pick Up Date</label><input type="date" class="form-control"></div>
+          <div class="col-md-2"><label class="form-label small">Pick Up Time</label><input type="time" class="form-control"></div>
+          <div class="col-md-2"><button class="btn btn-primary w-100">Search</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Car Category -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Car Category</h2>
+      <div class="row g-3">
+        <div class="col-6 col-lg-3">
+          <div class="category-card">
+            <img src="images/images (2).jpeg" alt="Mazda">
+            <div class="category-label">MAZDA</div>
+            <a href="#" class="btn btn-primary btn-sm position-absolute bottom-0 end-0 m-3 rounded-circle"><i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="category-card">
+            <img src="images/images (29).jpeg" alt="Toyota">
+            <div class="category-label text-dark">TOYOTA</div>
+            <a href="#" class="btn btn-outline-light btn-sm position-absolute bottom-0 end-0 m-3 rounded-circle"><i class="bi bi-arrow-up-right text-dark"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="category-card">
+            <img src="images/images (38).jpeg" alt="Ford">
+            <div class="category-label">FORD</div>
+            <a href="#" class="btn btn-outline-light btn-sm position-absolute bottom-0 end-0 m-3 rounded-circle"><i class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="category-card">
+            <img src="images/images (5).jpeg" alt="Nissan">
+            <div class="category-label text-dark">NISSAN</div>
+            <a href="#" class="btn btn-outline-light btn-sm position-absolute bottom-0 end-0 m-3 rounded-circle"><i class="bi bi-arrow-up-right text-dark"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trend Vehicles -->
+  <section class="py-5" style="background: var(--cm-light);">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold mb-0">Trend vehicles</h2>
+        <a href="#" class="btn btn-primary btn-sm rounded-pill">View all <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <div class="trend-card p-3" style="background:#6c83b4;">
+            <h6 class="fw-bold">Mazda CX-5 : 2026</h6>
+            <img src="images/images (3).jpeg" class="img-fluid my-2" alt="">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">$150/day</span>
+              <button class="btn btn-primary btn-sm">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="trend-card p-3 bg-white">
+            <h6 class="fw-bold">Toyota 4Runner : 2026</h6>
+            <img src="images/images (1).jpeg" class="img-fluid my-2" alt="">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">$130/day</span>
+              <button class="btn btn-outline-danger btn-sm">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="trend-card p-3 bg-white">
+            <h6 class="fw-bold">Ford F-150 : 2026</h6>
+            <img src="images/nissan.jfif" class="img-fluid my-2" alt="">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">$140/day</span>
+              <button class="btn btn-outline-danger btn-sm">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="trend-card p-3 bg-white">
+            <h6 class="fw-bold">Nissan Terrano : 2026</h6>
+            <img src="images/2026-nissan-terrano-phev-concept.jpg" class="img-fluid my-2" alt="">
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-semibold">$190/day</span>
+              <button class="btn btn-outline-danger btn-sm">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="feature-bar py-4">
+    <div class="container">
+      <div class="row text-center g-3">
+        <div class="col-md-3"><i class="bi bi-calendar-check"></i><div class="small mt-1">Seamless booking</div></div>
+        <div class="col-md-3"><i class="bi bi-gem"></i><div class="small mt-1">Premium privileges</div></div>
+        <div class="col-md-3"><i class="bi bi-arrow-repeat"></i><div class="small mt-1">Free changes up to 24h</div></div>
+        <div class="col-md-3"><i class="bi bi-receipt"></i><div class="small mt-1">No extra fees</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discount Banner -->
+  <section class="discount py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold">Book Mercedes with <br>a big discount</h2>
+          <a href="#" class="btn btn-primary mt-3">Book Now</a>
+        </div>
+        <div class="col-lg-4 text-center">
+          <img src="images/mercedes-amg-gle63-s-4matic-mercedes-benz-front-view.webp" class="img-fluid" alt="Mercedes">
+        </div>
+        <div class="col-lg-2">
+          <div class="discount-badge p-3 rounded text-center">
+            <h3 class="fw-bold mb-0">50%</h3>
+            <small>For everyone Mercedes cars</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-center">Get in touch</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h6 class="fw-bold" style="color:var(--cm-blue);">Visit Us</h6>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-2"></i>123 Main Street, Harare, Zimbabwe</p>
+          <p class="mb-0"><i class="bi bi-clock-fill text-danger me-2"></i>Mon - Sat: 8am - 6pm</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold" style="color:var(--cm-blue);">Call Us</h6>
+          <p class="mb-1"><i class="bi bi-telephone-fill text-danger me-2"></i>+263 77 123 4567</p>
+          <p class="mb-0"><i class="bi bi-whatsapp text-danger me-2"></i>+263 71 987 6543</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold" style="color:var(--cm-blue);">Email Us</h6>
+          <p class="mb-1"><i class="bi bi-envelope-fill text-danger me-2"></i>info@crocomotors.co.zw</p>
+          <p class="mb-0"><i class="bi bi-headset text-danger me-2"></i>support@crocomotors.co.zw</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-8 mx-auto">
+          <form class="row g-3">
+            <div class="col-md-6"><input type="text" class="form-control" placeholder="Your Name"></div>
+            <div class="col-md-6"><input type="email" class="form-control" placeholder="Your Email"></div>
+            <div class="col-12"><textarea class="form-control" rows="3" placeholder="Message"></textarea></div>
+            <div class="col-12"><button class="btn btn-primary">Send Message</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-5 pb-3">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-md-3">
+          <h5 class="text-white">c<span style="color:var(--cm-red);">R</span>oco Motors</h5>
+          <p class="small">Subscribe to the newsletter</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Email">
+            <button class="btn btn-primary"><i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-white">Top cities</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Harare</a></li><li><a href="#">Bulawayo</a></li><li><a href="#">Mutare</a></li><li><a href="#">Gweru</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-white">Explore</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Intercity rides</a></li><li><a href="#">Limousine service</a></li><li><a href="#">Chauffeur service</a></li><li><a href="#">Airport transfer</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-white">Intercity rides</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Harare - Bulawayo</a></li><li><a href="#">Harare - Mutare</a></li><li><a href="#">Harare - Gweru</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <div class="d-flex justify-content-between small">
+        <span>© 2026 Croco Motors</span>
+        <div>
+          <a href="#" class="me-3">Terms</a>
+          <a href="#" class="me-3">Privacy policy</a>
+          <a href="#">Legal notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
